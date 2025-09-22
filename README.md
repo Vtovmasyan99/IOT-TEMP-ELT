@@ -50,7 +50,7 @@ Optional runtime variables:
 - `RUN_AS_AGENT` = `1|true|yes|on` to serve Prefect agent instead of immediate run
 - `PREFECT_API_SERVE` defaulted to `false` locally to avoid auto-starting a server
 
-Example `.env` (do not commit this):
+Example `.env` :
 
 ```
 # Either provide DATABASE_URL or PG* variables
