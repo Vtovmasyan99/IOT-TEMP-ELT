@@ -141,6 +141,7 @@ docker run --rm \
 
 Run the pipeline without the init step (override CMD):
 
+
 ```
 docker run --rm \
   --env-file .env \
@@ -154,6 +155,7 @@ docker run --rm \
 
 Check PostgreSQL connectivity from your host:
 
+
 ```
 # Requires psql installed and env loaded
 set -a && source .env 2>/dev/null || true && set +a
@@ -164,9 +166,12 @@ pg_isready -h "${PGHOST:-localhost}" -p "${PGPORT:-5432}" -d "${PGDATABASE:-iot}
 # Or via psql (returns 1 row)
 PGPASSWORD="${PGPASSWORD}" psql -h "${PGHOST:-localhost}" -p "${PGPORT:-5432}" -U "${PGUSER:-postgres}" -d "${PGDATABASE:-iot}" -c "select 1;"
 ```
-```
+
+
 
 ## Notes
+
+
 
 - If you change CSV schema, update `elt/dq.py`, `elt/db.py`, and `elt/sql/*` accordingly.
 - For troubleshooting, set `VERBOSE_LOGS=1` to see full tracebacks in logs.
