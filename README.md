@@ -139,14 +139,6 @@ docker run --rm \
   iot-elt:latest
 ```
 
-To run as a Prefect agent instead:
-
-```
-docker run --rm \
-  --env-file .env \
-  -e RUN_AS_AGENT=1 \
-  iot-elt:latest
-
 Run the pipeline without the init step (override CMD):
 
 ```
@@ -176,7 +168,6 @@ PGPASSWORD="${PGPASSWORD}" psql -h "${PGHOST:-localhost}" -p "${PGPORT:-5432}" -
 
 ## Notes
 
-- Module entrypoint is `elt.flow` (not `etl.flow`).
 - If you change CSV schema, update `elt/dq.py`, `elt/db.py`, and `elt/sql/*` accordingly.
 - For troubleshooting, set `VERBOSE_LOGS=1` to see full tracebacks in logs.
 
