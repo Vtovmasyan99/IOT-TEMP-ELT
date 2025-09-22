@@ -1,0 +1,8 @@
+pandas
+prefect>=2.16
+psycopg2-binary
+sqlalchemy
+python-dotenv
+pydantic>=2
+pytest
+python-dateutil

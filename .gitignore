@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.python-version
+
+# Virtual envs
+.venv/
+venv/
+commands.txt
+
+# Environment files
+.env
+.env.*
+
+# Editors/IDEs
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Runtime artifacts
+logs/
+archive/
+error/
+
+# Wheels / builds
+build/
+dist/
+*.egg-info/
